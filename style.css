@@ -8,12 +8,12 @@
 
     /* COLORS */
     --clr-dark: hsl(210, 40%, 5%); 
-    --clr-blue: hsl(210, 70%, 25%); /* main */ 
-    --clr-salmon: hsl(10, 65%, 60%); /* attention */ 
-    --clr-light: hsl(210, 20%, 85%);
+    --clr-base: hsl(210, 70%, 25%); 
+    --clr-accent: hsl(10, 65%, 60%); 
+    --clr-light: hsl(210, 10%, 85%);
 
 
-    --lin-grad: linear-gradient(155deg, hsl(10, 60%, 60%), hsl(210, 70%, 25%));
+    --lin-grad: linear-gradient(155deg, var(--clr-accent), var(--clr-base));
     --rad-grad: radial-gradient(hsl(10, 55%, 60%), hsl(210, 70%, 25%));
     
 }
@@ -24,10 +24,36 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav li {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    background-color: var(--clr-base);
+    opacity: 0.7;
+    padding: 15px;
+    border-radius: 25px;
+    font-family: var(--ff-sans-serif);
+    font-weight: 600;
+}
+
+li a:hover {
+    opacity: 1;
+    color: var(--clr-light);
 }
 
 .container {
@@ -63,12 +89,17 @@ h2 {
     font-size: 2.5rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+
+    color: var(--clr-base);
 }
 
 h2[id="color-palettes"]::before {
     display: none;
 }
 
+h2[id="color-palettes"]{    
+    margin-top: 20px;
+}
 
 h2::before{
     display: block;
@@ -79,7 +110,8 @@ h2::before{
     margin: 20px auto;
 
     border-radius: 3px;
-    background-image: linear-gradient(155deg, var(--clr-salmon), var(--clr-blue));
+    background-color: var(--clr-accent);
+    opacity: 0.6;
 }
 
 h3 {
@@ -108,7 +140,7 @@ p {
 }
 
 #banner {
-    background-image: linear-gradient(155deg, var(--clr-salmon), var(--clr-blue));
+    background-image: linear-gradient(155deg, var(--clr-accent), var(--clr-base));
     text-align: center;
     color: var(--clr-light);
     padding-bottom: 80px;
@@ -117,12 +149,14 @@ p {
 .color-code {
     font-size: 1rem;
     text-transform: uppercase;
-    font-style: italic;
+    font-family: var(--ff-num);
+    /* font-style: italic; */
+
 }
 
 .attn {
     font-weight: 900;
-    color: var(--clr-salmon);
+    color: var(--clr-accent);
 }
 
 .palette {
@@ -134,14 +168,14 @@ p {
 
 .color-palette-name {
     width: 100%;
-    color: var(--clr-blue);
+    color: var(--clr-base);
 }
 
 
 .color-box {
     width: 200px;
     height: 200px;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-right: 10px;
 
     display: flex;
@@ -193,7 +227,7 @@ div[id*="-1"], div[id*="-2"] {
 }
 
 #nightfall-4 {
-    background-color: hsl(210, 20%, 85%);
+    background-color: hsl(210, 10%, 85%);
 }
 
 
