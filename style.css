@@ -1,0 +1,200 @@
+:root {
+    /* FONTS */
+    --ff-serif: "Playfair Display", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --ff-sans-serif: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    --ff-num: "Merriweather", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* REFERENCE BORDER */
+    --ref-border: 1px solid red;
+
+    /* COLORS */
+    --clr-dark: hsl(210, 40%, 5%); 
+    --clr-blue: hsl(210, 70%, 25%); /* main */ 
+    --clr-salmon: hsl(10, 65%, 60%); /* attention */ 
+    --clr-light: hsl(210, 20%, 85%);
+
+
+    --lin-grad: linear-gradient(155deg, hsl(10, 60%, 60%), hsl(210, 70%, 25%));
+    --rad-grad: radial-gradient(hsl(10, 55%, 60%), hsl(210, 70%, 25%));
+    
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+
+    /* border: var(--ref-border); */
+}
+
+
+h1 {
+    display: block;
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 15px;
+
+    font-family: var(--ff-serif);
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 30px;
+
+    font-family: var(--ff-serif);
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+h2[id="color-palettes"]::before {
+    display: none;
+}
+
+
+h2::before{
+    display: block;
+    content: "";
+    position: relative;
+    height: 6px;
+    width: 100%;
+    margin: 20px auto;
+
+    border-radius: 3px;
+    background-image: linear-gradient(155deg, var(--clr-salmon), var(--clr-blue));
+}
+
+h3 {
+    font-family: var(--ff-sans-serif);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    padding: 30px 0 10px;
+}
+
+h5 {
+    margin-bottom: 30px;
+}
+
+
+p {
+    font-family: var(--ff-sans-serif);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#banner {
+    background-image: linear-gradient(155deg, var(--clr-salmon), var(--clr-blue));
+    text-align: center;
+    color: var(--clr-light);
+    padding-bottom: 80px;
+}
+
+.color-code {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.attn {
+    font-weight: 900;
+    color: var(--clr-salmon);
+}
+
+.palette {
+    display: flex;
+    flex-direction: row;   
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+
+.color-palette-name {
+    width: 100%;
+    color: var(--clr-blue);
+}
+
+
+.color-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.2rem;
+    font-family: var(--ff-sans-serif);
+    text-transform: capitalize;
+    text-align: center;
+
+    border: 1px solid var(--clr-dark);
+}
+
+
+
+div[id*="-1"], div[id*="-2"] {
+    color: var(--clr-light);
+}
+
+/* COLOR PALETTES */
+#grayscale-1 {
+    background-color: hsl(0, 0%, 5%);
+}
+
+#grayscale-2 {
+    background-color: hsl(0, 0%, 30%);
+}
+
+#grayscale-3 {
+    background-color: hsl(0, 0%, 60%);
+}
+
+#grayscale-4 {
+    background-color: hsl(0, 0%, 85%);
+}
+
+#nightfall-1 {
+    background-color: hsl(210, 40%, 5%);
+}
+
+#nightfall-2 {
+    background-color: hsl(210, 70%, 25%);
+}
+
+#nightfall-3 {
+    background-color: hsl(10, 65%, 60%);
+}
+
+#nightfall-4 {
+    background-color: hsl(210, 20%, 85%);
+}
+
+
+    
