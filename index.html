@@ -20,7 +20,7 @@
 </head>
 <body>
     
-
+    <!-- HEADER -->
     <header id="banner">
         <nav>
             <ul>
@@ -31,72 +31,131 @@
             </ul>
         </nav>
         <h1>website design system</h1>
-        <p>A brief guideline for color palettes, fonts and how to combine them</p>
+        <p>A brief guide to color palettes, fonts and how to combine them</p>
     </header>
-    <div class="container">
-        <main>
+    
+
+    <main>
+        <div class="main-container">
+
+            <!-- COLOR PALETTES SECTION -->
             <section role="region" aria-label="color-palettes">
                 <div>
+
+                    <!-- TEXT INFO -->
                     <h2 id="color-palettes">color palettes</h2>
-                    <h3>How to make sure that your color palette is more than just okay?</h3>
-                    <p><span class="attn">Convert it to grayscale:</span> Ideally, there should be enough contrast between all shades. Vary with the color values from high to low to refine your palette.</p>
+                    <p class="uppercase">make sure that your color palette creates legible contrast</h3>
+                    <p><span class="attn">Convert it to grayscale:</span> Ideally, there should be enough contrast between all shades.</p>
                 </div>
 
-                <div class="palette">
-                    <h4 class="color-palette-name">grayscale</h4>                    
-                    <div class="color-box" id="grayscale-1">
-                        <h5>jack black</h5>
-                        <p class="color-code">hsl(0, 0%, 5%)</p>
+                <div class="center">
+                    
+                    <!-- GRAYSCALE PALETTE -->
+                    <div class="container">
+                        <h3 class="color-palette-name">grayscale</h3>                    
+                        <div class="two-color-boxes">
+                            <div class="color-box" id="grayscale-1">
+                                <h4>jack black</h4>
+                                <p class="color-code">hsl(0, 0%, 5%)</p>
+                            </div>
+                            <div class="color-box" id="grayscale-2">
+                                <h4>dorian gray</h4>
+                                <p class="color-code">hsl(0, 0%, 30%)</p>
+                            </div>
+                        </div>
+                        <div class="two-color-boxes">
+                            <div class="color-box" id="grayscale-3">
+                                <h4>boring gray</h4>
+                                <p class="color-code">hsl(0, 0%, 60%)</p>
+                            </div>
+                            <div class="color-box remove-right-margin" id="grayscale-4">
+                                <h4>jack white</h4>
+                                <p class="color-code">hsl(0, 0%, 85%)</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="color-box" id="grayscale-2">
-                        <h5>dorian gray</h5>
-                        <p class="color-code">hsl(0, 0%, 30%)</p>
-                    </div>
-                    <div class="color-box" id="grayscale-3">
-                        <h5>boring gray</h5>
-                        <p class="color-code">hsl(0, 0%, 60%)</p>
-                    </div>
-                    <div class="color-box" id="grayscale-4">
-                        <h5>jack white</h5>
-                        <p class="color-code">hsl(0, 0%, 85%)</p>
+
+                    <!-- NIGHTFALF PALETTE -->
+                    <div class="container">
+                        <h3 class="color-palette-name">nightfall</h3>          
+                        
+                            <div class="two-color-boxes">
+                                <div class="color-box" id="nightfall-1">
+                                    <h4>clear night</h4>
+                                    <p class="color-code">hsl(210, 40%, 5%)</p>
+                                </div>
+                                <div class="color-box" id="nightfall-2">
+                                    <h4>getting late</h4>
+                                    <p class="color-code">hsl(210, 70%, 25%)</p>
+                                </div>
+                            </div>
+                        
+                            <div class="two-color-boxes">
+                                <div class="color-box" id="nightfall-3">
+                                    <h4>yummy clouds</h4>
+                                    <p class="color-code">hsl(10, 65%, 60%)</p>
+                                </div>
+                                <div class="color-box remove-right-margin" id="nightfall-4">
+                                    <h4>moonlight</h4>
+                                    <p class="color-code">hsl(210, 10%, 85%)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="palette">
-                    <h4 class="color-palette-name">nightfall</h4>                    
-                    <div class="color-box" id="nightfall-1">
-                        <h5>clear night</h5>
-                        <p class="color-code">hsl(210, 40%, 5%)</p>
-                    </div>
-                    <div class="color-box" id="nightfall-2">
-                        <h5>getting late</h5>
-                        <p class="color-code">hsl(210, 70%, 25%)</p>
-                    </div>
-                    <div class="color-box" id="nightfall-3">
-                        <h5>yummy clouds</h5>
-                        <p class="color-code">hsl(10, 65%, 60%)</p>
-                    </div>
-                    <div class="color-box" id="nightfall-4">
-                        <h5>moonlight</h5>
-                        <p class="color-code">hsl(210, 10%, 85%)</p>
-
-                    </div>
-                </div>
-
             </section>
 
+            <!-- FONTS SECTION -->
             <section role="region" aria-label="fonts">
                 <h2 id="fonts">fonts</h2>
+                <div class="center">
+
+                    <!-- SERIF FONTS -->
+                    <h3>serif: <span class="lighter-text">short texts (titles, headings, names)</span></h3> 
+                    
+                        <div class="container"> <!-- SEMANTICALLY WEIRD: CHANGE THE NAME -->
+                            <div class="font-box">
+                                <h3 class="font-name"><a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank">Playfair Display</a></h3>
+                                <p class="playfair-display">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                                <p class="playfair-display italic">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                                <p class="playfair-display bold">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            </div>
+
+                            <div class="font-box remove-right-margin">
+                                <h3 class="font-name"><a href="https://fonts.google.com/specimen/Cormorant" target="_blank">Cormorant</a></h3>
+                                <p class="cormorant">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                                <p class="cormorant italic">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                                <p class="cormorant bold">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            </div>
+                        </div>
+                    <h3>sans-serif: <span class="lighter-text">Long texts (paragraphs, lists, articles)</span></h3>
+                    <p></p>
+                    <div class="container">
+                        <div class="font-box">
+                            <h3 class="font-name"><a href="https://fonts.google.com/specimen/Raleway" target="_blank">Raleway</a></h3>
+                            <p class="raleway">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            <p class="raleway italic">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            <p class="raleway bold">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+
+                        <div class="font-box remove-right-margin">
+                            <h3 class="font-name"><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Display" target="_blank">Noto Sans Display</a></h3>
+                            <p class="noto-sans-display">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            <p class="noto-sans-display italic">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                            <p class="noto-sans-display bold">The quick brown fox jumps over the lazy dog.<br>0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section role="region" aria-label="styles">
                 <h2 id="styles">styles</h2>
             </section>
-        </main>
+        </div>    
+    </main>
 
-        <footer>
+    <footer>
 
-        </footer>
+    </footer>
         
     </div>
 </body>
