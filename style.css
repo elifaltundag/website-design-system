@@ -133,6 +133,7 @@ h2::before{
     display: flex;
     justify-content: center;
     flex-direction: column;   
+    
 
     border: var(--ref-border);
 }
@@ -207,9 +208,6 @@ h2::before{
     /* font-style: italic; */
 }
 
-
-
-
 .color-palette-name {
     width: 100%;
     color: var(--clr-base);
@@ -217,44 +215,58 @@ h2::before{
     margin-bottom: 10px;
 }
 
-
-
-div[id*="-1"], div[id*="-2"] {
+[id*="-1"], [id*="-2"] {
     color: var(--clr-light);
 }
 
-
-
+/* COLOR CODES */ 
 #grayscale-1 {
     background-color: hsl(0, 0%, 5%);
 }
-
 #grayscale-2 {
     background-color: hsl(0, 0%, 30%);
 }
-
 #grayscale-3 {
     background-color: hsl(0, 0%, 60%);
 }
-
 #grayscale-4 {
     background-color: hsl(0, 0%, 85%);
 }
-
 #nightfall-1 {
     background-color: hsl(210, 40%, 5%);
 }
-
 #nightfall-2 {
     background-color: hsl(210, 70%, 25%);
 }
-
 #nightfall-3 {
-    background-color: hsl(10, 65%, 60%);
+    background-color: hsl(5, 65%, 60%);
 }
-
 #nightfall-4 {
     background-color: hsl(210, 10%, 85%);
+}
+#bonfire-1 {
+    background-color: hsl(30, 10%, 10%); 
+}
+#bonfire-2 {
+    background-color: hsl(15, 50%, 25%);
+}
+#bonfire-3 {
+    background-color: hsl(15, 80%, 50%)
+}
+#bonfire-4 {
+    background-color: hsl(40, 50%, 90%);
+}
+#aquarium-1 {
+    background-color: hsl(240, 30%, 15%);
+}
+#aquarium-2 {
+    background-color: hsl(210, 50%, 45%);
+}
+#aquarium-3 {
+    background-color: hsl(180, 50%, 65%);
+}
+#aquarium-4 {
+    background-color: hsl(180, 30%, 85%);
 }
 
 
