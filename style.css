@@ -1,3 +1,18 @@
+/*
+1.  GLOBAL
+2.  TAGS
+3.  SECTION DIVIDER
+4.  POSITIONING - GENERAL
+5.  TEXT & BACKGROUND STYLING - SPECIFIC
+6.  COLOR PALETTES
+7.  FONTS
+8.  TEXT STYLES
+9.  COLOR CODES
+10. SPECIFIC FONTS
+*/
+
+
+/* 1. GLOBAL */
 :root {
     /* FONTS */
     --ff-serif: "Playfair Display", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -7,10 +22,10 @@
     --ref-border: 3px solid rgba(199, 0, 0, 0);
 
     /* COLORS */
-    --clr-dark: hsl(210, 40%, 5%); 
-    --clr-base: hsl(210, 70%, 25%); 
-    --clr-accent: hsl(10, 65%, 60%); 
-    --clr-light: hsl(210, 10%, 85%);
+    --clr-dark:   hsl(210, 40%, 5%); 
+    --clr-base:   hsl(210, 70%, 25%); 
+    --clr-accent: hsl(5, 65%, 60%); 
+    --clr-light:  hsl(210, 10%, 85%);
 
 
     --lin-grad: linear-gradient(155deg, var(--clr-accent), var(--clr-base));
@@ -24,6 +39,9 @@
     padding: 0;
 }
 
+
+
+/* 2. TAGS*/
 html {
     scroll-behavior: smooth;
 }
@@ -31,7 +49,7 @@ html {
 body {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--ff-sans-serif)
 }
 
 h1 {
@@ -59,20 +77,16 @@ h2 {
     color: var(--clr-base);
 }
 
-
-
 h3 {
     font-size: 1.4rem;
     text-transform: capitalize;
-    padding: 30px 0 10px;
 }
 
 h4 {
     margin-bottom: 30px;
 }
 
-
-p {
+p, li {
     font-family: var(--ff-sans-serif);
     font-size: 1.2rem;
     line-height: 1.5;
@@ -85,26 +99,29 @@ nav li {
 }
 
 li a {
+    padding: 15px;
+
+    /* font-family: var(--ff-sans-serif); */
+    font-weight: 600;
     text-decoration: none;
+    
     color: hsl(0, 0%, 100%);
     background-color: var(--clr-base);
     opacity: 0.8;
-    padding: 15px;
-    border-radius: 25px;
-    font-family: var(--ff-sans-serif);
-    font-weight: 600;
+    
+    border-radius: 25px;  
 }
 
 li a:hover {
-    background-color: var(--clr-accent);
-    opacity: 1;
-    color: var(--clr-light);
     font-weight: 800;
+    color: var(--clr-light);
+    background-color: var(--clr-accent);
+    opacity: 1;    
 }
 
 
-/* SECITON DIVIDER */ 
 
+/* 3. SECITON DIVIDER */ 
 h2[id="color-palettes"]::before {
     display: none;
 }
@@ -126,15 +143,18 @@ h2::before{
     opacity: 0.6;
 }
 
+
+
+/* 4. POSITIONING - GENERAL */ 
 .main-container {
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
+    
     display: flex;
     justify-content: center;
     flex-direction: column;   
     
-
     border: var(--ref-border);
 }
 
@@ -145,7 +165,9 @@ h2::before{
     justify-content: center;    
 }
 
-/* SPECIFIC TEXT STYLING */ 
+
+
+/* 5. SPECIFIC TEXT & BACKGROUND STYLING */ 
 .uppercase {
     font-family: var(--ff-sans-serif);
     text-transform: uppercase;
@@ -163,6 +185,9 @@ h2::before{
     font-weight: lighter;
 }
 
+.font-type {
+    margin: 30px 0 10px;
+}
 
 #banner {
     background-image: linear-gradient(155deg, var(--clr-accent) 10%, var(--clr-base) 90%);
@@ -173,10 +198,8 @@ h2::before{
 }
 
 
-/* COLOR PALETTES */
 
-
-
+/* 6. COLOR PALETTES */
 .two-color-boxes {
     display: inline-flex;
     flex-wrap: wrap;
@@ -212,66 +235,17 @@ h2::before{
     width: 100%;
     color: var(--clr-base);
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0 20px;
+
 }
 
 [id*="-1"], [id*="-2"] {
     color: var(--clr-light);
 }
 
-/* COLOR CODES */ 
-#grayscale-1 {
-    background-color: hsl(0, 0%, 5%);
-}
-#grayscale-2 {
-    background-color: hsl(0, 0%, 30%);
-}
-#grayscale-3 {
-    background-color: hsl(0, 0%, 60%);
-}
-#grayscale-4 {
-    background-color: hsl(0, 0%, 85%);
-}
-#nightfall-1 {
-    background-color: hsl(210, 40%, 5%);
-}
-#nightfall-2 {
-    background-color: hsl(210, 70%, 25%);
-}
-#nightfall-3 {
-    background-color: hsl(5, 65%, 60%);
-}
-#nightfall-4 {
-    background-color: hsl(210, 10%, 85%);
-}
-#bonfire-1 {
-    background-color: hsl(30, 10%, 10%); 
-}
-#bonfire-2 {
-    background-color: hsl(15, 50%, 25%);
-}
-#bonfire-3 {
-    background-color: hsl(15, 80%, 50%)
-}
-#bonfire-4 {
-    background-color: hsl(40, 50%, 90%);
-}
-#aquarium-1 {
-    background-color: hsl(240, 30%, 15%);
-}
-#aquarium-2 {
-    background-color: hsl(210, 50%, 45%);
-}
-#aquarium-3 {
-    background-color: hsl(180, 50%, 65%);
-}
-#aquarium-4 {
-    background-color: hsl(180, 30%, 85%);
-}
 
 
-
-/* FONTS */
+/* 7. FONTS */
 .font-box {
     width: 410px;
     margin: 10px;
@@ -310,44 +284,99 @@ h2::before{
     opacity: 1;
 }
 
-
-
 .font-name {
     width: 250px;
     height: 40px;
     margin: 10px auto 20px auto;
     padding-top: 10px;
     padding-bottom: 40px;
-    
-    
+        
     text-align: center;
     border-radius: 30px;
 }
 
+
+
+/* 8. TEXT STYLES*/
+[aria-label="styles"] li {
+    list-style: inside;
+}
+
+#heading-1 {
+    font-family: var(--ff-serif);
+}
+
+/* 9. COLOR CODES */ 
+#grayscale-1 {
+    background-color: hsl(0, 0%, 5%);
+}
+#grayscale-2 {
+    background-color: hsl(0, 0%, 30%);
+}
+#grayscale-3 {
+    background-color: hsl(0, 0%, 60%);
+}
+#grayscale-4 {
+    background-color: hsl(0, 0%, 85%);
+}
+#nightfall-1 {
+    background-color: hsl(210, 40%, 5%);
+}
+#nightfall-2 {
+    background-color: hsl(210, 70%, 25%);
+}
+#nightfall-3 {
+    background-color: hsl(5, 65%, 60%);
+}
+#nightfall-4 {
+    background-color: hsl(210, 10%, 85%);
+}
+#bonfire-1 {
+    background-color: hsl(30, 10%, 10%); 
+}
+#bonfire-2 {
+    background-color: hsl(15, 50%, 25%);
+}
+#bonfire-3 {
+    background-color: hsl(15, 80%, 50%);
+}
+#bonfire-4 {
+    background-color: hsl(30, 50%, 90%);
+}
+#aquarium-1 {
+    background-color: hsl(240, 30%, 15%);
+}
+#aquarium-2 {
+    background-color: hsl(210, 50%, 45%);
+}
+#aquarium-3 {
+    background-color: hsl(180, 50%, 65%);
+}
+#aquarium-4 {
+    background-color: hsl(180, 30%, 85%);
+}
+
+
+
+/* 10. SPECIFIED FONTS */ 
 .italic {
     font-style: italic;
 }
-
 .bold {
     font-weight: 600 ;
-}
- 
-
+} 
 .playfair-display {
     font-family: "Playfair Display";
     font-size: 1.1rem;
 }
-
 .cormorant {
     font-family: "Cormorant";
     font-size: 1.3rem;
 }
-
 .raleway {
     font-family: "Raleway";
     font-size: 1.1rem;
 }
-
 .noto-sans-display {
     font-family: "Noto Sans Display";
     font-size: 1.1rem;
