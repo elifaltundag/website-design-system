@@ -362,12 +362,7 @@ h2::before{
 }
 
 .style-box {
-    width: 50%;
-    margin-bottom: 5px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    border: none;
 
     /* border: var(--ref-border); */
 }
@@ -443,7 +438,32 @@ h2::before{
 #nightfall-4 {
     background-color: hsl(210, 10%, 85%);
 }
-
+/* REMOVED COLOR PALETTES
+#bonfire-1 {
+    background-color: hsl(30, 10%, 10%); 
+}
+#bonfire-2 {
+    background-color: hsl(15, 50%, 25%);
+}
+#bonfire-3 {
+    background-color: hsl(15, 80%, 50%);
+}
+#bonfire-4 {
+    background-color: hsl(30, 50%, 90%);
+}
+#aquarium-1 {
+    background-color: hsl(240, 30%, 15%);
+}
+#aquarium-2 {
+    background-color: hsl(210, 50%, 45%);
+}
+#aquarium-3 {
+    background-color: hsl(180, 50%, 65%);
+}
+#aquarium-4 {
+    background-color: hsl(180, 30%, 85%);
+}
+*/ 
 
 
 /* 10. SPECIFIC FONTS */ 
