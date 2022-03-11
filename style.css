@@ -55,7 +55,7 @@ body {
 h1 {
     display: block;
     margin-top: 0;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 15px;
 
     font-family: var(--ff-serif);
@@ -65,7 +65,7 @@ h1 {
     text-transform: uppercase;
 }
 
-h2 {
+h2 { /* CHECK SECTION DIVIDER FOR PSEUDO-ELEMENTS */ 
     margin-bottom: 10px;
 
     font-family: var(--ff-serif);
@@ -93,12 +93,15 @@ p, li {
     line-height: 1.5;
 }
 
-nav li {
+nav ul {
     display: inline-flex;
     flex-direction: row;
-    margin-top: 20px;
 }
 
+nav li {
+    list-style: none;
+    margin: 30px 5px; 
+}
 li a {
     padding: 15px;
 
@@ -119,6 +122,50 @@ li a:hover {
     opacity: 1;    
 }
 
+footer {
+    padding: 40px 0;
+    
+    color:hsl(0, 0%, 100%);
+    background-image: linear-gradient(155deg, var(--clr-accent) 10%, var(--clr-base) 90%);;
+    text-align: center;
+    
+}
+
+footer a {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    position: relative;
+}
+
+footer a::before {
+    content: attr(data-tool-tip);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    background-color: var(--clr-accent);
+    color:hsl(0, 0%, 100%);
+    
+    font-size: .9rem;
+    font-weight: 600;
+    transform: scale(0);
+    transition: 
+        transform ease-out 150ms,
+        bottom ease-out 150ms;
+}
+
+footer a:hover::before {
+    transform: scale(1);
+    bottom: 110%;
+}
+
+footer a::after {
+    content: " \279A";
+}
 
 
 /* 3. SECITON DIVIDER */ 
@@ -143,14 +190,6 @@ h2::before{
     opacity: 0.6;
 }
 
-footer {
-    padding: 30px 0;
-    
-    color:hsl(0, 0%, 100%);
-    background-image: linear-gradient(155deg, var(--clr-accent) 10%, var(--clr-base) 90%);;
-    text-align: center;
-    
-}
 
 
 
@@ -206,7 +245,7 @@ footer {
     background-image: linear-gradient(155deg, var(--clr-accent) 10%, var(--clr-base) 90%);
     text-align: center;
     color: var(--clr-light);
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     margin-bottom: 30px;
 }
 
