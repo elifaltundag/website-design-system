@@ -18,19 +18,15 @@
     --ff-serif: "Playfair Display", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --ff-sans-serif: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     --ff-num: "Merriweather", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
     /* REFERENCE BORDER */
-    --ref-border: 1px solid rgba(199, 0, 0, 0);
+    --ref-border: 1px solid rgb(199, 0, 0);
 
     /* COLORS */
     --clr-dark:   hsl(210, 40%, 5%); 
     --clr-base:   hsl(210, 70%, 25%); 
     --clr-accent: hsl(5, 65%, 60%); 
-    --clr-light:  hsl(210, 10%, 85%);
-
-
-    --lin-grad: linear-gradient(155deg, var(--clr-accent), var(--clr-base));
-    --rad-grad: radial-gradient(hsl(10, 55%, 60%), hsl(210, 70%, 25%));
-    
+    --clr-light:  hsl(210, 10%, 85%);    
 }
 
 *, *::before, *::after {
@@ -68,13 +64,13 @@ h1 {
 h2 { /* CHECK SECTION DIVIDER FOR PSEUDO-ELEMENTS */ 
     margin-bottom: 10px;
 
+    color: var(--clr-base);
+
     font-family: var(--ff-serif);
     font-weight: 800;
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
-
-    color: var(--clr-base);
+    text-transform: uppercase;    
 }
 
 h3 {
@@ -104,22 +100,21 @@ nav li {
 }
 li a {
     padding: 15px;
+    border-radius: 25px; 
 
-    /* font-family: var(--ff-sans-serif); */
-    font-weight: 600;
-    text-decoration: none;
-    
     color: hsl(0, 0%, 100%);
     background-color: var(--clr-base);
     opacity: 0.8;
-    
-    border-radius: 25px;  
+
+    font-weight: 600;
+    text-decoration: none;
 }
 
 li a:hover {
-    font-weight: 900;
     background-color: var(--clr-accent);
-    opacity: 1;    
+    opacity: 1; 
+    font-weight: 900;
+       
 }
 
 footer {
@@ -132,9 +127,9 @@ footer {
 }
 
 footer a {
+    position: relative;
     color: hsl(0, 0%, 100%);
     font-weight: 600;
-    position: relative;
 }
 
 footer a::before {
@@ -169,6 +164,7 @@ footer a::after {
 }
 
 
+
 /* 3. SECITON DIVIDER */ 
 h2[id="color-palettes"]::before {
     display: none;
@@ -181,16 +177,16 @@ h2[id="color-palettes"]{
 h2::before{
     display: block;
     content: "";
+
     position: relative;
     height: 6px;
     width: 100%;
     margin: 20px auto;
-
     border-radius: 3px;
+    
     background-color: var(--clr-accent);
     opacity: 0.6;
 }
-
 
 
 
@@ -204,7 +200,7 @@ h2::before{
     justify-content: center;
     flex-direction: column;   
     
-    border: var(--ref-border);
+    /* border: var(--ref-border); */
 }
 
 .container-rows {
@@ -219,6 +215,8 @@ h2::before{
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+
 
 /* 5. SPECIFIC TEXT & BACKGROUND STYLING */ 
 .uppercase {
@@ -263,6 +261,7 @@ h2::before{
     height: 150px;
     border-radius: 6px;
     margin: 0 5px 30px;
+    border: 1px solid var(--clr-dark);
 
     display: flex;
     flex-direction: column;
@@ -273,15 +272,12 @@ h2::before{
     font-family: var(--ff-sans-serif);
     text-transform: capitalize;
     text-align: center;
-
-    border: 1px solid var(--clr-dark);
 }
 
 .color-code {
     font-size: 1rem;
     text-transform: uppercase;
     font-family: var(--ff-num);
-    /* font-style: italic; */
 }
 
 .color-palette-name {
@@ -339,7 +335,6 @@ h2::before{
     background-color: var(--clr-accent);
     border: 3px solid var(--clr-accent);
     opacity: 1;
-
 }
 
 .font-name {
@@ -363,7 +358,7 @@ h2::before{
     align-content: flex-end;
     justify-content: space-between;
 
-    border: var(--ref-border);
+    /* border: var(--ref-border); */
 }
 
 .style-box {
@@ -374,9 +369,9 @@ h2::before{
     flex-direction: column;
     justify-content: flex-end;
 
-    border: var(--ref-border);
-    
+    /* border: var(--ref-border); */
 }
+
 .style-properties li {
     list-style: inside;
 }
@@ -475,7 +470,7 @@ h2::before{
 
 
 
-/* 10. SPECIFIED FONTS */ 
+/* 10. SPECIFIC FONTS */ 
 .italic {
     font-style: italic;
 }
