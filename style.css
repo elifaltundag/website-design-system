@@ -116,6 +116,7 @@ li a:hover {
     background-color: var(--clr-accent);
     opacity: 1; 
     font-weight: 900;
+    border: 1px solid var(--clr-light);
        
 }
 
@@ -145,9 +146,11 @@ footer a::before {
     width: 150px;
     padding: 5px 10px;
 
-    border-radius: 5px;
     background-color: var(--clr-accent);
     color:hsl(0, 0%, 100%);
+    border: 1px solid var(--clr-light);
+    border-radius: 5px;
+
     
     font-size: .9rem;
     font-weight: 600;
@@ -251,7 +254,7 @@ h2::before{
     margin-bottom: 30px;
 }
 
-#banner p {
+#banner h1, #banner p {
     text-shadow: 0 0 4px hsla(0, 0%, 100%, 0.7);
 }
 
