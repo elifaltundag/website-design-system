@@ -19,7 +19,7 @@
     --ff-sans-serif: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     --ff-num: "Merriweather", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* REFERENCE BORDER */
-    --ref-border: 3px solid rgba(199, 0, 0, 0);
+    --ref-border: 1px solid rgba(199, 0, 0, 0);
 
     /* COLORS */
     --clr-dark:   hsl(210, 40%, 5%); 
@@ -66,7 +66,7 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     font-family: var(--ff-serif);
     font-weight: 800;
@@ -78,6 +78,7 @@ h2 {
 }
 
 h3 {
+    margin-top: 10px;
     font-size: 1.4rem;
     text-transform: capitalize;
 }
@@ -113,8 +114,7 @@ li a {
 }
 
 li a:hover {
-    font-weight: 800;
-    color: var(--clr-light);
+    font-weight: 900;
     background-color: var(--clr-accent);
     opacity: 1;    
 }
@@ -143,6 +143,15 @@ h2::before{
     opacity: 0.6;
 }
 
+footer {
+    padding: 30px 0;
+    
+    color:hsl(0, 0%, 100%);
+    background-image: linear-gradient(155deg, var(--clr-accent) 10%, var(--clr-base) 90%);;
+    text-align: center;
+    
+}
+
 
 
 /* 4. POSITIONING - GENERAL */ 
@@ -158,14 +167,18 @@ h2::before{
     border: var(--ref-border);
 }
 
-.container {
+.container-rows {
     display: flex;
     flex-direction: row;   
     flex-wrap: wrap;
     justify-content: center;    
 }
 
-
+.container-columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 /* 5. SPECIFIC TEXT & BACKGROUND STYLING */ 
 .uppercase {
@@ -186,7 +199,7 @@ h2::before{
 }
 
 .font-type {
-    margin: 30px 0 10px;
+    margin: 15px 0;
 }
 
 #banner {
@@ -206,10 +219,10 @@ h2::before{
 }
 
 .color-box {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 150px;
     border-radius: 6px;
-    margin: 0 10px 30px;
+    margin: 0 5px 30px;
 
     display: flex;
     flex-direction: column;
@@ -281,7 +294,12 @@ h2::before{
 }
 
 .font-box a:hover {
+    font-weight: 900;
+    color: hsl(0, 0%, 100%);
+    background-color: var(--clr-accent);
+    border: 3px solid var(--clr-accent);
     opacity: 1;
+
 }
 
 .font-name {
@@ -298,12 +316,71 @@ h2::before{
 
 
 /* 8. TEXT STYLES*/
-[aria-label="styles"] li {
+.styles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+
+    border: var(--ref-border);
+}
+
+.style-box {
+    width: 50%;
+    margin-bottom: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border: var(--ref-border);
+    
+}
+.style-properties li {
     list-style: inside;
 }
 
-#heading-1 {
+#remarks ul {
+    margin-bottom: 30px;
+}
+
+#remarks li {
+    list-style: none;
+}
+
+#remarks li::before {    
+    content: "\2022";
+    margin-right: 10px;
+    color: var(--clr-accent);    
+}
+
+
+#heading1 {
     font-family: var(--ff-serif);
+    font-size: 4rem;
+    color: var(--clr-accent);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#heading2 {
+    font-family: var(--ff-serif);
+    font-size: 3rem;
+    color: var(--clr-base);
+}
+
+#heading3 {
+    font-family: var(--ff-sans-serif);
+    font-size: 2rem;
+    color: var(--clr-base);
+}
+
+#paragraph {
+    font-family: var(--ff-sans-serif);
+    font-size: 1.2rem;
+    color: var(--clr-dark);
+    font-weight: 400;
 }
 
 /* 9. COLOR CODES */ 
