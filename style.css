@@ -59,7 +59,7 @@ h1 {
     font-size: 4rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    text-shadow: 0 0 4px hsla(0, 0%, 100%, 0.7);
+    /* text-shadow: 0 0 4px hsla(0, 0%, 100%, 0.7); */
 }
 
 h2 { /* CHECK SECTION DIVIDER FOR PSEUDO-ELEMENTS */ 
@@ -249,6 +249,10 @@ h2::before{
     color: var(--clr-light);
     padding-bottom: 60px;
     margin-bottom: 30px;
+}
+
+#banner p {
+    text-shadow: 0 0 4px hsla(0, 0%, 100%, 0.7);
 }
 
 
