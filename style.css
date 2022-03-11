@@ -92,6 +92,7 @@ p, li {
 nav ul {
     display: inline-flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 nav li {
