@@ -378,7 +378,7 @@ h2::before{
 }
 
 .style-properties li {
-    list-style: inside;
+    list-style: none;
 }
 
 #remarks ul {
@@ -392,7 +392,7 @@ h2::before{
 #remarks li::before {    
     content: "\2022";
     margin-right: 10px;
-    color: var(--clr-accent);    
+    font-weight: 900;   
 }
 
 
