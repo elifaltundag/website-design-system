@@ -118,7 +118,7 @@ li a {
 li a:hover {
     opacity: 1; 
     font-weight: 900;
-       
+    cursor: pointer;   
 }
 
 footer {
@@ -164,6 +164,7 @@ footer a::before {
 footer a:hover::before {
     transform: scale(1);
     bottom: 110%;
+    cursor: pointer;
 }
 
 footer a::after {
@@ -346,6 +347,7 @@ h2::before{
     background-color: var(--clr-accent);
     border: 3px solid var(--clr-accent);
     opacity: .8;
+    cursor: pointer;
 }
 
 .font-name {
