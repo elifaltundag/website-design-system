@@ -22,11 +22,14 @@
     /* REFERENCE BORDER */
     --ref-border: 1px solid rgb(199, 0, 0);
 
+    /* BUTTON BORDER */ 
+    --btn-border: 1px solid var(--clr-light);
+
     /* COLORS */
     --clr-dark:   hsl(210, 40%, 5%); 
     --clr-base:   hsl(210, 70%, 25%); 
     --clr-accent: hsl(5, 65%, 60%); 
-    --clr-light:  hsl(210, 10%, 85%);    
+    --clr-light:  hsl(5, 10%, 85%);    
 }
 
 *, *::before, *::after {
@@ -113,10 +116,8 @@ li a {
 }
 
 li a:hover {
-    background-color: var(--clr-accent);
     opacity: 1; 
     font-weight: 900;
-    border: 1px solid var(--clr-light);
        
 }
 
@@ -148,7 +149,7 @@ footer a::before {
 
     background-color: var(--clr-accent);
     color:hsl(0, 0%, 100%);
-    border: 1px solid var(--clr-light);
+    border: var(--btn-border);
     border-radius: 5px;
 
     
@@ -344,7 +345,7 @@ h2::before{
     color: hsl(0, 0%, 100%);
     background-color: var(--clr-accent);
     border: 3px solid var(--clr-accent);
-    opacity: 1;
+    opacity: .8;
 }
 
 .font-name {
@@ -362,7 +363,7 @@ h2::before{
 
 /* 8. TEXT STYLES*/
 .styles {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-end;
@@ -370,6 +371,14 @@ h2::before{
 
     /* border: var(--ref-border); */
 }
+
+.flex-cont {
+    display: inline-flex;
+}
+
+/* .flex-item {
+
+} */
 
 .style-box {
     border: none;
