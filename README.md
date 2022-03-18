@@ -16,4 +16,5 @@ This is my first website design system.
 * Git Bash & Github
 
 ## Further Improvements 
+* Styles section: more consistent design with the rest of the page
 * Keep updating while learning new subjects on CSS
