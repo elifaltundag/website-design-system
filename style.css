@@ -371,6 +371,20 @@ h2::before{
 
 
 /* 8. TEXT STYLES*/
+.grid-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 620px;
+    column-gap: 5%;
+    justify-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-cont {
+        grid-template-columns: none;
+        justify-items: start;
+    }
+}
 .styles {
     display: flex;
     flex-direction: row;
@@ -386,6 +400,7 @@ h2::before{
 .flex-cont {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
 }
@@ -404,8 +419,8 @@ h2::before{
 }
 
 #remarks {
-    width: 50%;
-    max-width: 500px;
+    min-width: 300px;
+    flex-direction: column;
 }
 
 #remarks h3 {
