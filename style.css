@@ -372,24 +372,28 @@ h2::before{
 
 /* 8. TEXT STYLES*/
 .styles {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-end;
     justify-content: space-between;
 
+    margin-bottom: 50px;
+
     /* border: var(--ref-border); */
 }
 
 .flex-cont {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
-/* .flex-item {
 
-} */
 
 .style-box {
+    min-width: 300px;
     border: none;
 
     /* border: var(--ref-border); */
@@ -397,6 +401,17 @@ h2::before{
 
 .style-properties li {
     list-style: none;
+}
+
+#remarks {
+    width: 50%;
+    max-width: 500px;
+}
+
+#remarks h3 {
+    font-size: 2rem;
+    color: hsl(5, 65%, 60%);
+    margin-top: 0;
 }
 
 #remarks ul {
