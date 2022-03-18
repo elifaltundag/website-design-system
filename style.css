@@ -266,6 +266,7 @@ h2::before{
 .two-color-boxes {
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .color-box {
@@ -284,6 +285,12 @@ h2::before{
     font-family: var(--ff-sans-serif);
     text-transform: capitalize;
     text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .color-box {
+        width: 150px;
+    }
 }
 
 .color-code {
