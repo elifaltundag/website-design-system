@@ -585,6 +585,7 @@ h2::before{
 
     #banner p {
         width: 95%;
+        margin: 0 auto;
     }
 }
 
