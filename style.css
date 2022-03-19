@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 { /* CHECK SECTION DIVIDER FOR PSEUDO-ELEMENTS */ 
-    margin-bottom: 10px;
+    margin-bottom: .5em;
 
     color: var(--clr-base);
 
@@ -200,7 +200,7 @@ h2::before{
     position: relative;
     height: 6px;
     width: 100%;
-    margin: 20px auto;
+    margin: 1.2em auto .5em;
     border-radius: 3px;
     
     background-color: var(--clr-accent);
